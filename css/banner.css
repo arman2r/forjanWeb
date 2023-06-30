@@ -1,0 +1,110 @@
+swiper-container.banner {
+  width: 100%;
+  height: calc(100% - 250px);
+  display: flex;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.banner swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+swiper-container.banner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+swiper-container.service-banner {
+  width: 100%;
+  height: 100%;
+}
+
+.service-banner swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: rgba(31, 31, 31, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-banner swiper-slide img { 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+
+swiper-container.service-banner {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-banner swiper-slide.slide {
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  filter:blur(12px);
+  background-color: rgba(31, 31, 31, 1);
+}
+
+.service-banner swiper-slide.slide img{
+  opacity: .2 !important;
+}
+
+.service-banner swiper-slide.slide.swiper-slide-visible.swiper-slide-active{
+  filter: blur(0px);
+  background-color: rgba(31, 31, 31, 0);
+}
+
+.service-banner swiper-slide.slide.swiper-slide-visible.swiper-slide-active img{
+  opacity: 1 !important;
+}
+
+.service-banner {
+  height: 60%;
+  width: 100%;
+}
+
+.mySwiper2 {
+  height: 550px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper2 swiper-slide {
+  width: 100%;  
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  opacity: 0.4;
+}
+
+.mySwiper2 .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-services {
+  --swiper-pagination-bottom: inherit !important;
+  --swiper-pagination-top: 0px !important;
+}
+
+.gallery-project img{
+  height: 100%;
+  object-fit: cover;
+}
