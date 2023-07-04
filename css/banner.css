@@ -108,3 +108,15 @@ swiper-container.service-banner {
   height: 100%;
   object-fit: cover;
 }
+
+.project-carousel swiper-slide{
+  height: 550px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.project-carousel swiper-slide img{
+  object-fit: cover;
+  width: fit-content;
+  height: -webkit-fill-available;
+}
