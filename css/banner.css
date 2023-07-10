@@ -81,10 +81,19 @@ swiper-container.service-banner {
   width: 100%;
 }
 
-.mySwiper2 {
-  height: 550px;
+.mySwiper2 { 
   box-sizing: border-box;
   padding: 10px 0;
+}
+
+@media(min-width:993px) {
+  .mySwiper2 {
+    height: 550px;
+  }
+
+  .container-gallery-services{
+    height: 100%;
+  }
 }
 
 .mySwiper2 swiper-slide {
@@ -113,10 +122,111 @@ swiper-container.service-banner {
   height: 550px;
   border-radius: 30px;
   overflow: hidden;
+  width: auto !important;
+  cursor: pointer;
 }
+
+@media(max-width:599px){
+  .project-carousel swiper-slide{
+    width: 100% !important;
+  }
+}
+
 
 .project-carousel swiper-slide img{
   object-fit: cover;
   width: fit-content;
   height: -webkit-fill-available;
+}
+
+.bg-gradient-slide{
+  transition: all ease .3s;
+}
+
+.bg-gradient-slide::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 250%;
+  background: rgba(5,5,5,0);
+  background: -moz-linear-gradient(top, rgba(5,5,5,0) 0%, rgba(17,17,17,0.85) 21%, rgba(30,30,30,1) 44%, rgba(31,31,31,1) 46%, rgba(31,31,31,1) 68%, rgba(31,31,31,0.98) 78%, rgba(31,31,31,0.95) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(5,5,5,0)), color-stop(21%, rgba(17,17,17,0.85)), color-stop(44%, rgba(30,30,30,1)), color-stop(46%, rgba(31,31,31,1)), color-stop(68%, rgba(31,31,31,1)), color-stop(78%, rgba(31,31,31,0.98)), color-stop(100%, rgba(31,31,31,0.95)));
+  background: -webkit-linear-gradient(top, rgba(5,5,5,0) 0%, rgba(17,17,17,0.85) 21%, rgba(30,30,30,1) 44%, rgba(31,31,31,1) 46%, rgba(31,31,31,1) 68%, rgba(31,31,31,0.98) 78%, rgba(31,31,31,0.95) 100%);
+  background: -o-linear-gradient(top, rgba(5,5,5,0) 0%, rgba(17,17,17,0.85) 21%, rgba(30,30,30,1) 44%, rgba(31,31,31,1) 46%, rgba(31,31,31,1) 68%, rgba(31,31,31,0.98) 78%, rgba(31,31,31,0.95) 100%);
+  background: -ms-linear-gradient(top, rgba(5,5,5,0) 0%, rgba(17,17,17,0.85) 21%, rgba(30,30,30,1) 44%, rgba(31,31,31,1) 46%, rgba(31,31,31,1) 68%, rgba(31,31,31,0.98) 78%, rgba(31,31,31,0.95) 100%);
+  background: linear-gradient(to bottom, rgba(5,5,5,0) 0%, rgba(17,17,17,0.85) 21%, rgba(30,30,30,1) 44%, rgba(31,31,31,1) 46%, rgba(31,31,31,1) 68%, rgba(31,31,31,0.98) 78%, rgba(31,31,31,0.95) 100%);
+  z-index: 0;
+  transition: all ease .3s;
+}
+
+.bg-gradient-slide h5, .bg-gradient-slide i{
+  position: relative;
+  z-index: 5;
+}
+
+.project-carousel swiper-slide:hover .bg-gradient-slide {
+  padding-bottom: 2rem !important;
+}
+
+.project-carousel swiper-slide:hover .bg-gradient-slide i{
+  color: rgba(var(--bs-warning-rgb),var(--bs-text-opacity))!important;
+}
+
+.project-carousel swiper-slide:hover .bg-gradient-slide::after {
+  height: 180%;
+}
+
+.swipper-gallery-project swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swipper-gallery-project swiper-slide {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.swipper-gallery-project swiper-slide img{
+  height: 100%;
+}
+
+.swipper-gallery-project {
+  height: 80%;
+  width: 100%;
+}
+
+.swiper-gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.swiper-gallery-thumbs swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-gallery-thumbs swiper-slide img{
+  width: 100%;
+}
+
+.swiper-gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+@media(max-width:599px){
+  .swipper-gallery-project swiper-slide img{
+    width: 100% !important;
+    height: inherit !important;
+  }
 }
