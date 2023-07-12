@@ -21,12 +21,12 @@
     <link rel="stylesheet" href="css/page.css" />
     <link rel="stylesheet" href="css/banner.css" />
   </head>
-  <body>
+  <body class="bg-black">
     <div
       class="d-flex flex-wrap align-items-center justify-content-center w-100"
     >
-      <header class="w-100 z-3" style="position: sticky; top: 0">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <header id="header" class="w-100 z-3 header-page" style="position: sticky; top: 0">
+        <nav id="navbar-page" class="navbar navbar-expand-lg navbar-dark bg-dark bg-black">
           <div class="container">
             <div
               class="container-fluid d-flex flex-wrap justify-content-center"
@@ -51,7 +51,7 @@
                     alt="forjan-logo"
                     class="logo"
                 /></a>
-                <div></div>
+                <div class="d-lg-none d-flex" style="width: 30px;"></div>
               </div>
               <div
                 class="collapse navbar-collapse d-lg-flex justify-content-lg-end"
@@ -59,24 +59,21 @@
               >
                 <ul class="navbar-nav me-auto me-lg-0 mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"
+                    <a class="nav-link active" aria-current="page" href="#home"
                       >Home</a
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Perfil empresarial</a>
+                    <a class="nav-link" href="#perfil-empresarial">Perfil empresarial</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link">Nuestros servicios</a>
+                    <a class="nav-link" href="#nuestros-servicios">Nuestros servicios</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link">Cliente</a>
+                    <a class="nav-link" href="#trabajemos-juntos">Trabajemos juntos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link">Trabajemos juntos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link">Ubicación</a>
+                    <a class="nav-link" href="#ubicacion">Ubicación</a>
                   </li>
                 </ul>
               </div>
@@ -86,9 +83,10 @@
       </header>
 
       <!--Inicia Banner home-->
-      <div class="mask d-flex w-100 flex-wrap">
+      <div id="container-page" class="mask d-flex w-100 flex-wrap bg-dark" data-bs-spy="scroll" data-bs-target="#navbar-page" data-bs-smooth-scroll="true" tabindex="0">
         <swiper-container
-          class="mySwiper banner d-flex container-scroll"
+          id="home"
+          class="mySwiper banner d-flex"
           pagination="true"
           pagination-clickable="true"
           navigation="true"
@@ -106,7 +104,7 @@
           <swiper-slide>Slide 9</swiper-slide>
         </swiper-container>
 
-        <div class="d-none d-lg-flex flex-row w-100 text-secondary px-2 py-4">
+        <div id="services-link" class="d-none d-lg-flex flex-row w-100 text-secondary px-2 py-4">
           <div class="col-12 col-sm-3 border-end border-secondary px-4">
             <h4 class="text-warning">Arte en metal</h4>
             <small>
@@ -114,7 +112,7 @@
               Colombia.
             </small>
             <br />
-            <a class="icon-link text-decoration-none text-warning" href="#"
+            <a class="icon-link text-decoration-none text-warning" href="#arte-en-metal"
               ><i class="material-icons">arrow_right_alt </i></a
             >
           </div>
@@ -125,7 +123,7 @@
               cualquier espacio. Desde Puertas, ventanas, barandas, rejas.
             </small>
             <br />
-            <a class="icon-link text-decoration-none text-warning" href="#"
+            <a class="icon-link text-decoration-none text-warning" href="#ornamentacion"
               ><i class="material-icons">arrow_right_alt </i></a
             >
           </div>
@@ -138,7 +136,7 @@
               cualquier otro entorno, decoración versátil y personalizado.
             </small>
             <br />
-            <a class="icon-link text-decoration-none text-warning" href="#"
+            <a class="icon-link text-decoration-none text-warning" href="#decoracion-para-interiores-y-exteriores"
               ><i class="material-icons">arrow_right_alt </i></a
             >
           </div>
@@ -150,14 +148,14 @@
               sofisticados.
             </small>
             <br />
-            <a class="icon-link text-decoration-none text-warning" href="#"
+            <a class="icon-link text-decoration-none text-warning" href="#muebles"
               ><i class="material-icons">arrow_right_alt </i></a
             >
           </div>
         </div>
 
         <!--Cierra Banner home-->
-        <div class="flex-row w-100 position-relative py-3 container-scroll">
+        <div id="perfil-empresarial" class="flex-row w-100 position-relative py-3 container-scroll">
           <div
             class="d-none d-lg-flex col-12 col-md-6 z-0 py-5 my-5 align-items-center justify-content-end"
           >
@@ -192,7 +190,7 @@
           </div>
         </div>
 
-        <div
+        <div id="nuestros-servicios"
           class="w-100 z-0 d-flex flex-wrap container align-items-stretch container-scroll"
         >
           <div
@@ -286,8 +284,9 @@
               allow-touch-move="false"
               mousewheel="true"
               pauseOnMouseEnter="true"
+              data-bs-spy="scroll" data-bs-target="#services-link"
             >
-              <swiper-slide class="slide" data-hash="arte-en-metal">
+              <swiper-slide id="arte-en-metal" class="slide" data-hash="arte-en-metal">
                 <swiper-container
                   class="w-100 d-flex h-100 swiper-services"
                   pagination="true"
@@ -309,7 +308,7 @@
                   /></swiper-slide>
                 </swiper-container>
               </swiper-slide>
-              <swiper-slide class="slide" data-hash="ornamentacion">
+              <swiper-slide id="ornamentacion" class="slide" data-hash="ornamentacion">
                 <swiper-container
                   class="w-100 d-flex h-100 swiper-services"
                   pagination="true"
@@ -332,6 +331,7 @@
                 </swiper-container>
               </swiper-slide>
               <swiper-slide
+                id="decoracion-para-interiores-y-exteriores"
                 class="slide"
                 data-hash="decoracion-para-interiores-y-exteriores"
               >
@@ -356,7 +356,7 @@
                   /></swiper-slide>
                 </swiper-container>
               </swiper-slide>
-              <swiper-slide class="slide" data-hash="muebles">
+              <swiper-slide id="muebles" class="slide" data-hash="muebles">
                 <swiper-container
                   class="w-100 d-flex h-100 swiper-services"
                   pagination="true"
@@ -381,7 +381,7 @@
             </swiper-container>
           </div>
         </div>
-        <div class="w-100">
+        <div id="proyectos" class="w-100">
           <div
             class="container d-flex flex-column align-items-start py-5 container-scroll"
           >
@@ -562,7 +562,7 @@
           </div>
         </div>
 
-        <div class="w-100 py-5">
+        <div id="trabajemos-juntos" class="w-100 py-5">
           <div class="container text-center py-5 container-scroll">
             <div class="col-12 col-lg-10 offset-lg-1 pb-4">
               <h4 class="fw-bold text-white">
@@ -697,10 +697,10 @@
           </div>
         </div>
 
-        <footer class="d-flex flex-wrap bg-dark text-white w-100">
+        <footer id="ubicacion" class="d-flex flex-wrap bg-dark text-white w-100">
           <div class="divider w-100 bg-warning" style="height: 2px"></div>
-          <div class="container d-flex flex-wrap justify-content-center py-4">
-            <div class="col-12 col-lg-3 px-lg-3">
+          <div class="container d-flex flex-wrap justify-content-center py-5">
+            <div class="col-12 col-lg-3 px-lg-3 py-3">
               <h4>Agenda tu cita</h4>
               <p>
                 Dedicamos un espacio único y exclusivo para tu caso, acompañado
@@ -711,7 +711,7 @@
               </p>
             </div>
 
-            <div class="col-12 col-lg-3 px-lg-3">
+            <div class="col-12 col-lg-3 px-lg-3 py-3">
               <h4>Encuentranos</h4>
               <ul class="list-group bg-dark text-white border-0 p-0">
                 <li
@@ -800,7 +800,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-12 col-lg-6 py-3 py-lg-0">
+            <div class="col-12 col-lg-6 py-3">
               <div id="map" class="w-100 h-100"></div>
             </div>
           </div>
@@ -926,6 +926,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/swiper.js"></script>
+    <script src="js/page-scroll.js"></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
       defer

@@ -1,5 +1,4 @@
-body {
-    background-color: #1f1f1f;
+body { 
     letter-spacing: .5px;
 }
 
@@ -51,6 +50,12 @@ body {
     transition: scrollbar-color 0.3s ease-out;
     z-index: 8; 
     scroll-snap-type: y proximity;
+    transition: all .3s ease;
+}
+
+.resize-mask{
+    margin: 10px 20px;
+    height: 88vh;
 }
 
 .container-scroll{
@@ -72,6 +77,14 @@ body {
     background: transparent !important;
 }
 
+header.header-page .logo{
+    transition: all ease .3s;
+}
+
+header.header-page.smaller .logo{
+    max-width: 185px;
+}
+
 @media (min-width: 993px) {
     .container{
         max-width: 1500px !important;
@@ -84,6 +97,18 @@ body {
 
 
 @media(max-width:992px) {
+    header.header-page.smaller .logo{
+        max-width: 175px;
+    }
+    .mask {
+        margin: 15px;
+        height: 84vh;
+        scroll-snap-type: y initial;
+    }
+    .resize-mask {
+        margin: 5px 15px !important;
+        height: 89vh;
+    }
     .logo{
         max-width: 180px
     }
