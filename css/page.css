@@ -103,7 +103,7 @@ header.header-page.smaller .logo{
     .mask {
         margin: 15px;
         height: 84vh;
-        scroll-snap-type: y initial;
+        scroll-snap-type: y mandatory;
     }
     .resize-mask {
         margin: 5px 15px !important;
