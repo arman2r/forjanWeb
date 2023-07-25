@@ -1,7 +1,7 @@
 document.getElementById('container-page').onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.getElementById('container-page').scrollTop > 50 || document.getElementById('container-page').scrollTop > 50) {
+  if (document.getElementById('container-page').scrollTop >= 350) {
     document.getElementById("header").classList.add('smaller');
     document.getElementById('container-page').classList.add('resize-mask')
   } else {
