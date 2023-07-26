@@ -6,6 +6,60 @@ swiper-container.banner {
   border-bottom-right-radius: 20px;
 }
 
+.content-text{
+  position: absolute; 
+  bottom:15%;
+  z-index: 10;
+}
+
+.content-text::before{
+  content: '';
+  width: 100px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -10px;
+}
+
+.content-text.text-start{
+  margin-left: 10%;
+  padding-left: 20px;
+}
+
+.content-text.text-end{
+  margin-right: 10%;
+  padding-right: 20px;
+}
+
+.content-text.text-start::before{
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: inherit !important;
+  margin: 0 !important;
+  bottom: inherit !important;
+}
+
+.content-text.text-end::before{
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: inherit !important;
+  right: 0 !important;
+  top: 0;
+  margin: 0 !important;
+  bottom: inherit !important;
+}
+
 @media(max-width:991px){
   swiper-container.banner { 
     height: 300px;
