@@ -6,6 +6,12 @@ swiper-container.banner {
   border-bottom-right-radius: 20px;
 }
 
+@media(max-width:991px){
+  swiper-container.banner { 
+    height: 300px;
+  }
+}
+
 .banner swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -15,16 +21,16 @@ swiper-container.banner {
   align-items: center;
 }
 
-.banner swiper-slide::after{ 
+.banner swiper-slide::after {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  -webkit-box-shadow: inset 0px 0px 136px 49px rgba(0,0,0,0.9);
-  -moz-box-shadow: inset 0px 0px 136px 49px rgba(0,0,0,0.9);
-  box-shadow: inset 0px 0px 136px 49px rgba(0,0,0,0.9);
+  -webkit-box-shadow: inset 0px 0px 136px 49px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: inset 0px 0px 136px 49px rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0px 0px 136px 49px rgba(0, 0, 0, 0.9);
   z-index: 2;
 }
 
@@ -36,55 +42,66 @@ swiper-container.banner {
   object-fit: cover;
 }
 
-.banner swiper-slide img.zoom-paneo-animate {  
-  height: inherit !important;
-  object-fit: none !important;
-  width: 100%;
-  animation: inImageZoomPaneo 30s ease-in-out infinite; 
-  transform-style: preserve-3d; 
-}
+@media(min-width:992px) {
+  .banner swiper-slide img.zoom-paneo-animate {
+    height: inherit !important;
+    object-fit: none !important;
+    width: 100%;
+    animation: inImageZoomPaneo 30s ease-in-out infinite;
+    transform-style: preserve-3d;
+  }
 
-.banner swiper-slide img.zoom-out-animate {   
-  animation: inImageZoomOut 30s ease-in-out infinite; 
-  transform-style: preserve-3d; 
-}
+  .banner swiper-slide img.zoom-out-animate {
+    animation: inImageZoomOut 30s ease-in-out infinite;
+    transform-style: preserve-3d;
+  }
 
-@keyframes inImageZoomOut {
-  0% { 
-    transform: scale3d(1.8, 1.8, 1) skewY(0deg);
-  } 
-  50% { 
-    transform: scale3d(1.2, 1.2, 1) skewY(0deg);
-  }
-  100% { 
-    transform: scale3d(1.8, 1.8, 1) skewY(0deg);
-  } 
-}
+  @keyframes inImageZoomOut {
+    0% {
+      transform: scale3d(1.8, 1.8, 1) skewY(0deg);
+    }
 
-@keyframes inImageZoomPaneo {
-  0% { 
-    transform: translateY(73%) translateX(45%) scale3d(4, 4, 1) skewY(0deg);
+    50% {
+      transform: scale3d(1.2, 1.2, 1) skewY(0deg);
+    }
+
+    100% {
+      transform: scale3d(1.8, 1.8, 1) skewY(0deg);
+    }
   }
-  20% { 
-    transform: translateY(73%) translateX(-45%) scale3d(4, 4, 1) skewY(0deg);
-  }
-  40% { 
-    transform: translateY(35%) translateX(0%) scale3d(2, 2, 1) skewY(0deg);
-  }
-  50% { 
-    transform: translateY(38%) translateX(0%) scale3d(2, 2, 1) skewY(0deg);
-  }
-  60% { 
-    transform: translateY(35%) translateX(0%) scale3d(2, 2, 1) skewY(0deg);
-  }
-  70% { 
-    transform: translateY(35%) translateX(0%) scale3d(2, 2, 1) skewY(0deg);
-  }
-  90% { 
-    transform: translateY(73%) translateX(-45%) scale3d(4, 4, 1) skewY(0deg);
-  }
-  100% { 
-    transform: translateY(73%) translateX(45%) scale3d(4, 4, 1) skewY(0deg);
+
+  @keyframes inImageZoomPaneo {
+    0% {
+      transform: translateY(73%) translateX(45%) scale3d(4, 4, 1) skewY(0deg);
+    }
+
+    20% {
+      transform: translateY(73%) translateX(-45%) scale3d(4, 4, 1) skewY(0deg);
+    }
+
+    40% {
+      transform: translateY(35%) translateX(0%) scale3d(2, 2, 1) skewY(0deg);
+    }
+
+    50% {
+      transform: translateY(38%) translateX(0%) scale3d(2, 2, 1) skewY(0deg);
+    }
+
+    60% {
+      transform: translateY(35%) translateX(0%) scale3d(2, 2, 1) skewY(0deg);
+    }
+
+    70% {
+      transform: translateY(35%) translateX(0%) scale3d(2, 2, 1) skewY(0deg);
+    }
+
+    90% {
+      transform: translateY(73%) translateX(-45%) scale3d(4, 4, 1) skewY(0deg);
+    }
+
+    100% {
+      transform: translateY(73%) translateX(45%) scale3d(4, 4, 1) skewY(0deg);
+    }
   }
 }
 
@@ -107,12 +124,12 @@ swiper-container.service-banner {
   align-items: center;
 }
 
-.service-banner swiper-slide img { 
+.service-banner swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
- 
+
 
 swiper-container.service-banner {
   width: 100%;
@@ -125,20 +142,20 @@ swiper-container.service-banner {
   background-size: cover;
   background-position: center;
   border-radius: 20px;
-  filter:blur(12px);
+  filter: blur(12px);
   background-color: rgba(31, 31, 31, 1);
 }
 
-.service-banner swiper-slide.slide img{
+.service-banner swiper-slide.slide img {
   opacity: .2 !important;
 }
 
-.service-banner swiper-slide.slide.swiper-slide-visible.swiper-slide-active{
+.service-banner swiper-slide.slide.swiper-slide-visible.swiper-slide-active {
   filter: blur(0px);
   background-color: rgba(31, 31, 31, 0);
 }
 
-.service-banner swiper-slide.slide.swiper-slide-visible.swiper-slide-active img{
+.service-banner swiper-slide.slide.swiper-slide-visible.swiper-slide-active img {
   opacity: 1 !important;
 }
 
@@ -147,7 +164,7 @@ swiper-container.service-banner {
   width: 100%;
 }
 
-.mySwiper2 { 
+.mySwiper2 {
   box-sizing: border-box;
   padding: 10px 0;
 }
@@ -157,13 +174,13 @@ swiper-container.service-banner {
     height: 550px;
   }
 
-  .container-gallery-services{
+  .container-gallery-services {
     height: 100%;
   }
 }
 
 .mySwiper2 swiper-slide {
-  width: 100%;  
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-flow: column;
@@ -179,12 +196,12 @@ swiper-container.service-banner {
   --swiper-pagination-top: 0px !important;
 }
 
-.gallery-project img{
+.gallery-project img {
   height: 100%;
   object-fit: cover;
 }
 
-.project-carousel swiper-slide{
+.project-carousel swiper-slide {
   height: 550px;
   border-radius: 30px;
   overflow: hidden;
@@ -192,20 +209,20 @@ swiper-container.service-banner {
   cursor: pointer;
 }
 
-@media(max-width:599px){
-  .project-carousel swiper-slide{
+@media(max-width:599px) {
+  .project-carousel swiper-slide {
     width: 100% !important;
   }
 }
 
 
-.project-carousel swiper-slide img{
+.project-carousel swiper-slide img {
   object-fit: cover;
   width: fit-content;
   height: -webkit-fill-available;
 }
 
-.bg-gradient-slide{
+.bg-gradient-slide {
   transition: all ease .3s;
 }
 
@@ -216,18 +233,18 @@ swiper-container.service-banner {
   top: 0;
   width: 100%;
   height: 250%;
-  background: rgba(5,5,5,0);
-  background: -moz-linear-gradient(top, rgba(5,5,5,0) 0%, rgba(17,17,17,0.85) 21%, rgba(30,30,30,1) 44%, rgba(31,31,31,1) 46%, rgba(31,31,31,1) 68%, rgba(31,31,31,0.98) 78%, rgba(31,31,31,0.95) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(5,5,5,0)), color-stop(21%, rgba(17,17,17,0.85)), color-stop(44%, rgba(30,30,30,1)), color-stop(46%, rgba(31,31,31,1)), color-stop(68%, rgba(31,31,31,1)), color-stop(78%, rgba(31,31,31,0.98)), color-stop(100%, rgba(31,31,31,0.95)));
-  background: -webkit-linear-gradient(top, rgba(5,5,5,0) 0%, rgba(17,17,17,0.85) 21%, rgba(30,30,30,1) 44%, rgba(31,31,31,1) 46%, rgba(31,31,31,1) 68%, rgba(31,31,31,0.98) 78%, rgba(31,31,31,0.95) 100%);
-  background: -o-linear-gradient(top, rgba(5,5,5,0) 0%, rgba(17,17,17,0.85) 21%, rgba(30,30,30,1) 44%, rgba(31,31,31,1) 46%, rgba(31,31,31,1) 68%, rgba(31,31,31,0.98) 78%, rgba(31,31,31,0.95) 100%);
-  background: -ms-linear-gradient(top, rgba(5,5,5,0) 0%, rgba(17,17,17,0.85) 21%, rgba(30,30,30,1) 44%, rgba(31,31,31,1) 46%, rgba(31,31,31,1) 68%, rgba(31,31,31,0.98) 78%, rgba(31,31,31,0.95) 100%);
-  background: linear-gradient(to bottom, rgba(5,5,5,0) 0%, rgba(17,17,17,0.85) 21%, rgba(30,30,30,1) 44%, rgba(31,31,31,1) 46%, rgba(31,31,31,1) 68%, rgba(31,31,31,0.98) 78%, rgba(31,31,31,0.95) 100%);
+  background: rgba(5, 5, 5, 0);
+  background: -moz-linear-gradient(top, rgba(5, 5, 5, 0) 0%, rgba(17, 17, 17, 0.85) 21%, rgba(30, 30, 30, 1) 44%, rgba(31, 31, 31, 1) 46%, rgba(31, 31, 31, 1) 68%, rgba(31, 31, 31, 0.98) 78%, rgba(31, 31, 31, 0.95) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(5, 5, 5, 0)), color-stop(21%, rgba(17, 17, 17, 0.85)), color-stop(44%, rgba(30, 30, 30, 1)), color-stop(46%, rgba(31, 31, 31, 1)), color-stop(68%, rgba(31, 31, 31, 1)), color-stop(78%, rgba(31, 31, 31, 0.98)), color-stop(100%, rgba(31, 31, 31, 0.95)));
+  background: -webkit-linear-gradient(top, rgba(5, 5, 5, 0) 0%, rgba(17, 17, 17, 0.85) 21%, rgba(30, 30, 30, 1) 44%, rgba(31, 31, 31, 1) 46%, rgba(31, 31, 31, 1) 68%, rgba(31, 31, 31, 0.98) 78%, rgba(31, 31, 31, 0.95) 100%);
+  background: -o-linear-gradient(top, rgba(5, 5, 5, 0) 0%, rgba(17, 17, 17, 0.85) 21%, rgba(30, 30, 30, 1) 44%, rgba(31, 31, 31, 1) 46%, rgba(31, 31, 31, 1) 68%, rgba(31, 31, 31, 0.98) 78%, rgba(31, 31, 31, 0.95) 100%);
+  background: -ms-linear-gradient(top, rgba(5, 5, 5, 0) 0%, rgba(17, 17, 17, 0.85) 21%, rgba(30, 30, 30, 1) 44%, rgba(31, 31, 31, 1) 46%, rgba(31, 31, 31, 1) 68%, rgba(31, 31, 31, 0.98) 78%, rgba(31, 31, 31, 0.95) 100%);
+  background: linear-gradient(to bottom, rgba(5, 5, 5, 0) 0%, rgba(17, 17, 17, 0.85) 21%, rgba(30, 30, 30, 1) 44%, rgba(31, 31, 31, 1) 46%, rgba(31, 31, 31, 1) 68%, rgba(31, 31, 31, 0.98) 78%, rgba(31, 31, 31, 0.95) 100%);
   z-index: 0;
   transition: all ease .3s;
 }
 
-.bg-gradient-slide h5, .bg-gradient-slide i{
+.bg-gradient-slide h5, .bg-gradient-slide i {
   position: relative;
   z-index: 5;
 }
@@ -236,8 +253,8 @@ swiper-container.service-banner {
   padding-bottom: 2rem !important;
 }
 
-.project-carousel swiper-slide:hover .bg-gradient-slide i{
-  color: rgba(var(--bs-warning-rgb),var(--bs-text-opacity))!important;
+.project-carousel swiper-slide:hover .bg-gradient-slide i {
+  color: rgba(var(--bs-warning-rgb), var(--bs-text-opacity)) !important;
 }
 
 .project-carousel swiper-slide:hover .bg-gradient-slide::after {
@@ -258,7 +275,7 @@ swiper-container.service-banner {
   justify-content: center;
 }
 
-.swipper-gallery-project swiper-slide img{
+.swipper-gallery-project swiper-slide img {
   height: 100%;
 }
 
@@ -282,7 +299,7 @@ swiper-container.service-banner {
   align-items: center;
 }
 
-.swiper-gallery-thumbs swiper-slide img{
+.swiper-gallery-thumbs swiper-slide img {
   width: 100%;
 }
 
@@ -290,8 +307,8 @@ swiper-container.service-banner {
   opacity: 1;
 }
 
-@media(max-width:599px){
-  .swipper-gallery-project swiper-slide img{
+@media(max-width:599px) {
+  .swipper-gallery-project swiper-slide img {
     width: 100% !important;
     height: inherit !important;
   }
