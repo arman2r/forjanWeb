@@ -48,13 +48,12 @@ body {
     border-bottom-right-radius: 25px;
     scrollbar-color: #d4aa70 #e4e4e4;
     transition: scrollbar-color 0.3s ease-out;
-    z-index: 8; 
-    scroll-snap-type: y proximity;
+    z-index: 8;  
     transition: all .3s ease;
 }
 
 .resize-mask{
-    margin: 10px 20px;
+    margin: 10px;
     height: 88vh;
 }
 
