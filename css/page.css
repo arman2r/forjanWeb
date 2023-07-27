@@ -101,12 +101,12 @@ header.header-page.smaller .logo{
     }
     .mask {
         margin: 15px;
-        height: 84vh;
+        height: 86vh;
         scroll-snap-type: none;
     }
     .resize-mask {
         margin: 5px 15px !important;
-        height: 89vh;
+        height: 91vh;
     }
     .logo{
         max-width: 180px
