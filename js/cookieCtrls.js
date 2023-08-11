@@ -28,17 +28,13 @@ function checkCookie() {
     offcanvas.hide();
   } else {
     var offcanvas = new bootstrap.Offcanvas(myOffcanvas);
-    offcanvas.show();
-    /*if (user != "" && user != null) {
-         setCookie("username", user, 360);
-       }*/
+    offcanvas.show(); 
   }
 }
 
 var myOffcanvas = document.getElementById("offcanvasBottom");
 
-myOffcanvas.addEventListener("hidden.bs.offcanvas", (event) => {
-  console.log("esta cerrando el canvas");
+myOffcanvas.addEventListener("hidden.bs.offcanvas", (event) => { 
   //setCookie("forjanweb", "forjan.com.co", 360);
   let user = getCookie("username");
   setCookie("username", user, 360);
@@ -61,8 +57,7 @@ window.addEventListener('popstate', function (event) {
   }
 });
 
-function openModalPolitics() {
-  console.log('abriendo modal politicas')
+function openModalPolitics() { 
   const myModal = new bootstrap.Modal('#modalPolitics')
   const modalToggle = document.getElementById('modalPolitics'); 
   myModal.show(modalToggle)
