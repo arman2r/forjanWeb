@@ -46,4 +46,37 @@ myOffcanvas.addEventListener("hidden.bs.offcanvas", (event) => {
 
 document.addEventListener("DOMContentLoaded", function (event) {
   checkCookie();
+  //window.location.hash = ''
+  //console.log('comprobando hash', window.location.hash == '#politicas-de-privacidad')
+  if(window.location.hash == '#politicas-de-privacidad') {
+    openModalPolitics()
+  }
 });
+
+window.addEventListener('popstate', function (event) {
+	// Log the state data to the console
+	//console.log('comprobando hash', window.location.hash == '#politicas-de-privacidad')
+  if(window.location.hash == '#politicas-de-privacidad') {
+    openModalPolitics()
+  }
+});
+
+function openModalPolitics() {
+  console.log('abriendo modal politicas')
+  const myModal = new bootstrap.Modal('#modalPolitics')
+  const modalToggle = document.getElementById('modalPolitics'); 
+  myModal.show(modalToggle)
+}
+
+function acceptPolitics() {
+  var myModalEl = document.getElementById('modalPolitics');
+  var modal = bootstrap.Modal.getInstance(myModalEl)
+  modal.hide(); 
+
+  setTimeout(() => {
+    var modalCokiesBottom = document.getElementById('offcanvasBottom'); 
+    var canvasBottom = bootstrap.Offcanvas.getInstance(modalCokiesBottom)
+    canvasBottom.hide();
+  },300)
+}
+
