@@ -73,10 +73,14 @@ function acceptPolitics() {
   var modal = bootstrap.Modal.getInstance(myModalEl)
   modal.hide(); 
 
+  document.querySelectorAll('.modal-backdrop')[0].remove()
+
   setTimeout(() => {
     var modalCokiesBottom = document.getElementById('offcanvasBottom'); 
     var canvasBottom = bootstrap.Offcanvas.getInstance(modalCokiesBottom)
     canvasBottom.hide();
+    document.querySelectorAll('.offcanvas-backdrop')[0].remove()
   },300)
+  
 }
 
